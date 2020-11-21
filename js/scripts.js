@@ -27,4 +27,18 @@ var elMoviesSorts = $_('.js-movies-sorts');
 var elMoviesList = $_('.js-movies-list');
 var elMoviesTemplate = $_('#movie-template').content;
 
+var createMoviesElement = function (compactMovies) {
+  var elNewMovie = elMoviesTemplate.cloneNode(true);
 
+  $_('.movie-title', elNewMovie).textContent = compactMovies.title;
+  $_('movie-image', elNewMovie).src = compactMovies.imageUrl;
+  $_('movie-image', elNewMovie).alt = compactMovies.title;
+  $_('movie-year', elNewMovie).textContent = compactMovies.year;
+  $_('movie-categories', elNewMovie).textContent = compactMovies.categories;
+  $_('movie-summary', elNewMovie).textContent = compactMovies.summary;
+  $_('movie-imdb-rating', elNewMovie).textContent = compactMovies.imdbRating;
+  $_('movie-language', elNewMovie).textContent = compactMovies.language;
+  $_('movie-youtube', elNewMovie).href = elNewMovie.youtubeId;
+
+  return elNewMovie;
+};
