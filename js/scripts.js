@@ -42,3 +42,19 @@ var createMoviesElement = function (compactMovies) {
 
   return elNewMovie;
 };
+
+// Announcing the Fragment
+
+var renderMovies = function (compactMovies) {
+  elMoviesList.innerHTML = '';
+
+  var elMoviesWrapperFragment = document.createDocumentFragment();
+
+  compactMovies.forEach(function (movie) {
+    elMoviesWrapperFragment.appendChild(createMoviesElement(movie));
+  });
+
+  elMoviesList.appendChild(elMoviesWrapperFragment);
+};
+
+renderMovies(compactMovies.slice(0, 100));
