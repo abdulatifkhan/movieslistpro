@@ -12,7 +12,7 @@
 
   <h1>Movies list</h1>
 
-  <form class="js-movies-form" action="https://echo.htmlacademy.ru" method="POST">
+  <form class="movies-form js-movies-form" action="https://echo.htmlacademy.ru" method="POST">
 
     <div>
       <label for="id-movie-name">Search movies</label>
@@ -59,7 +59,23 @@
     </select>
 
     <button type="submit">Search</button>
-  </form>
+  </form><!-- movies-form -->
+
+  <ul class="js-movies-list movies"></ul>
+
+  <!-- MOVIE TEMPLATE -->
+  <template id="movies-template">
+    <li class="movie-item">
+      <img src="" alt="" width="300" height="150">
+      <div class="movie-title">Patton Oswalt: Annihilation</div>
+      <div class="movie-year">2017</div>
+      <div class="movie-categories">Uncategorized</div>
+      <div class="movie-summary">Patton Oswald, despite a personal tragedy, produces his best standup yet. Focusing on the tribulations of the Trump era and life after the loss of a loved one, Patton Oswald continues his journey to contribute joy to the world.</div>
+      <div class="movie-imdb-rating">7.4</div>
+      <div class="movie-language">English</div>
+      <a href="https://www.youtube.com/watch?v=4hZi5QaMBFc">Watch tizer</a>
+    </li>
+  </template>
 
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
