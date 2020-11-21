@@ -21,7 +21,7 @@
       </div>
   
       <label for="categories"></label>
-      <select class="form-control col-2 mx-2 js-movie-categories" name="categories" id="categories" required>
+      <select class="form-control col-2 mx-2 js-movies-categories" name="categories" id="categories" required>
         <option value="select-categories" selected disabled>Select categories</option>
         <!-- <option value="uncategorized">Uncategorized</option>
         <option value="documentary">Documentary</option>
@@ -49,7 +49,7 @@
       </select>
   
       <label for="id-sorts"></label>
-      <select class="form-control col-2 mx-2 js-movie-sorts" name="sorts" id="id-sorts" required>
+      <select class="form-control col-2 mx-2 js-movies-sorts" name="sorts" id="id-sorts" required>
         <option value="select-sorts" selected disabled>Select sorts</option>
         <!-- <option value="alph-a-z">Alphabetically (A - Z)</option>
         <option value="alph-z-a">Alphabetically (Z - A)</option>
@@ -65,7 +65,7 @@
     <ul class="js-movies-list movies"></ul>
   
     <!-- MOVIE TEMPLATE -->
-    <template id="movies-template">
+    <template id="movie-template">
       <li class="movie-item">
         <img src="" alt="" width="300" height="150">
         <div class="movie-title">Patton Oswalt: Annihilation</div>
@@ -81,8 +81,8 @@
 
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/movies.js"></script>
   <script src="js/utils.js"></script>
-  
   <script src="js/scripts.js"></script>
 </body>
 </html>
