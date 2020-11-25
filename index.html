@@ -17,12 +17,16 @@
   
       <div class="form-group d-flex align-items-center m-0">
         <label class="text-nowrap" for="id-movie-name">Search movies</label>
-        <input class="form-control mx-2 js-movies-input" type="search" placeholder="Write movies" name="movie-name" id="id-movie-name" autocomplete="off" required>
+        <input class="form-control mx-2 js-movies-input" type="search"  placeholder="Write movies" name="movie-name" id="id-movie-name" autocomplete="off" required>
       </div>
+
+      <div class="form-group d-flex align-items-center m-0">
+        <input class="form-control mx-2 js-movies-rating" type="number" step="any" placeholder="Rating" name="movie-rating" id="id-movie-name" autocomplete="off" value="5" aria-label="Rating movies" required>
+    </div>
   
       <label for="categories"></label>
       <select class="form-control col-2 mx-2 js-movies-categories" name="categories" id="categories" required>
-        <option value="select-categories" selected disabled>Select categories</option>
+        <option value="all" selected disabled>All</option>
         <!-- <option value="uncategorized">Uncategorized</option>
         <option value="documentary">Documentary</option>
         <option value="music">Music</option>
@@ -55,33 +59,33 @@
         <option value="alph-z-a">Alphabetically (Z - A)</option>
         <option value="cheap">Cheap first</option>
         <option value="expensive">Expensive at first</option>
-        <option value="from-below">Rating (from below)</option>
-        <option value="from-top">Rating (from top)</option> -->
+        <option value="from-below">Rating (from top)</option>
+        <option value="from-top">Rating (from below)</option> -->
       </select>
   
       <button class="btn btn-info" type="submit">Search</button>
     </form><!-- movies-form -->
   
-    <ul class="js-movies-list movies"></ul>
+    <ul class="list-unstyled js-movies-list movies"></ul>
   
     <!-- MOVIE TEMPLATE -->
     <template id="movie-template">
       <li class="movie-item">
-        <div class="movie-title">Patton Oswalt: Annihilation</div>
         <img class="movie-image" src="" alt="" width="300" height="150">
+        <div class="movie-title">Patton Oswalt: Annihilation</div>
         <div class="movie-year">2017</div>
         <div class="movie-categories">Uncategorized</div>
         <div class="movie-summary">Patton Oswald, despite a personal tragedy, produces his best standup yet. Focusing on the tribulations of the Trump era and life after the loss of a loved one, Patton Oswald continues his journey to contribute joy to the world.</div>
         <div class="movie-imdb-rating">7.4</div>
         <div class="movie-language">English</div>
-        <a class="movie-youtube" href="https://www.youtube.com/watch?v=4hZi5QaMBFc">Watch tizer</a>
+        <a class="movie-youtube" href="https://www.youtube.com/watch?v=4hZi5QaMBFc" target="_blank">Watch tizer</a>
       </li>
     </template>
   </div>
 
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/movies.js"></script>
+  <script src="js/compact-movies.js"></script>
   <script src="js/utils.js"></script>
   <script src="js/scripts.js"></script>
 </body>

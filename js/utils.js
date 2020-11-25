@@ -16,3 +16,15 @@ var createElement = function (tagName, className, text) {
 
   return element;
 };
+
+var getYouTubeVideoLink = function (videoId) {
+  return `https://www.youtube.com/watch?v=${videoId}`;
+};
+
+var getYouTubeVideoBigThumbnail = function (videoId) {
+  return `http://i3.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
+};
+
+var getYouTubeVideoThumbnail = function (videoId) {
+  return `http://i3.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+};
